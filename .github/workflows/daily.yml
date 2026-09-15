@@ -1,0 +1,29 @@
+name: daily snapshot
+
+# one row per chain per day into data/daily.csv: the gas price, and the execution and layer-1 parts
+# of the two sample transactions in wei, with the ether price used. public endpoints, no keys.
+
+on:
+  schedule:
+    - cron: "3 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python -m l2fees --summary-append data/daily.csv --quiet
+      - name: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/daily.csv
+          git diff --cached --quiet || git commit -m "data: snapshot $(date -u +%F)"
+          git push
