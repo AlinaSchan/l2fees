@@ -16,7 +16,7 @@ from .fees import ChainResult, gas_price, quote
 from .rpc import Rpc, RpcError, RpcUnavailable
 from .samples import SAMPLES
 
-USER_AGENT = "l2fees/0.1 (+https://github.com/alinaschanz/l2fees)"
+USER_AGENT = "l2fees/0.1 (+https://github.com/AlinaSchan/l2fees)"
 SUMMARY_FIELDS = ("date_utc", "time_utc", "chain", "chain_id", "base_fee_wei", "tip_wei", "transfer_exec_wei", "transfer_l1_wei",
                   "transfer_total_wei", "swap_exec_wei", "swap_l1_wei", "swap_total_wei", "eth_usd")
 

@@ -1,10 +1,10 @@
 # l2fees
 
-[![ci](https://github.com/alinaschanz/l2fees/actions/workflows/ci.yml/badge.svg)](https://github.com/alinaschanz/l2fees/actions/workflows/ci.yml)
+[![ci](https://github.com/AlinaSchan/l2fees/actions/workflows/ci.yml/badge.svg)](https://github.com/AlinaSchan/l2fees/actions/workflows/ci.yml)
 ![python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab)
 ![license mit](https://img.shields.io/badge/license-MIT-2b7a74)
-[![release](https://img.shields.io/github/v/release/alinaschanz/l2fees?color=2b7a74)](https://github.com/alinaschanz/l2fees/releases)
-[![openssf scorecard](https://api.scorecard.dev/projects/github.com/alinaschanz/l2fees/badge)](https://scorecard.dev/viewer/?uri=github.com/alinaschanz/l2fees)
+[![release](https://img.shields.io/github/v/release/AlinaSchan/l2fees?color=2b7a74)](https://github.com/AlinaSchan/l2fees/releases)
+[![openssf scorecard](https://api.scorecard.dev/projects/github.com/AlinaSchan/l2fees/badge)](https://scorecard.dev/viewer/?uri=github.com/AlinaSchan/l2fees)
 
 what a transaction costs right now on ethereum and thirteen rollups. two real transactions from
 mainnet, a plain transfer and a uniswap swap, priced on every chain the way the chain itself prices
@@ -53,7 +53,7 @@ does for the same bytes: same oracle, different scalars.
 ## install
 
 ```
-pipx install git+https://github.com/alinaschanz/l2fees
+pipx install git+https://github.com/AlinaSchan/l2fees
 ```
 
 or clone it and run `python -m l2fees` from the folder. python 3.10 or newer, no dependencies.
@@ -109,7 +109,7 @@ l2fees --summary-append data/daily.csv --quiet   # one row per chain, the datase
   hour: ethereum's base fee moves the l1 data column, each chain's own base fee moves the rest.
 - an l1 data fee is what the chain's oracle says at this moment; after a fee spike on ethereum an
   oracle can lag by a few minutes. the table reads it, it does not check it (that is
-  [an open issue](https://github.com/alinaschanz/l2fees/issues)).
+  [an open issue](https://github.com/AlinaSchan/l2fees/issues)).
 - the swap's execution gas is what it used on mainnet. on a rollup the same swap would use about the
   same, but not exactly: different pools, different state. the calldata is priced as it is.
 - cents, not dollars: nearly every number on a rollup is below a cent, and the digits after the
@@ -132,8 +132,8 @@ transfers in wei.
 
 ## see also
 
-- [blobwatch](https://github.com/alinaschanz/blobwatch): what the rollups pay ethereum for the blobs those bytes end up in
-- [gasweek](https://github.com/alinaschanz/gasweek): when ethereum itself is cheapest, by hour of day
+- [blobwatch](https://github.com/AlinaSchan/blobwatch): what the rollups pay ethereum for the blobs those bytes end up in
+- [gasweek](https://github.com/AlinaSchan/gasweek): when ethereum itself is cheapest, by hour of day
 - the notes: [alinaschanz.life](https://alinaschanz.life), the short version on [x](https://x.com/alinaschanz)
 
 ## verify a release
@@ -143,7 +143,7 @@ file, and a build provenance attestation made in github's own signing flow. with
 into one folder:
 
     sha256sum -c SHA256SUMS
-    gh attestation verify ./*.whl --owner alinaschanz
+    gh attestation verify ./*.whl --owner AlinaSchan
     ots verify SHA256SUMS.ots
 
 the commit itself is [signed](https://alinaschanz.life/verify/#commits).

@@ -5,7 +5,7 @@ import json
 import urllib.error
 import urllib.request
 
-USER_AGENT = "l2fees/0.1 (+https://github.com/alinaschanz/l2fees)"
+USER_AGENT = "l2fees/0.1 (+https://github.com/AlinaSchan/l2fees)"
 
 
 class RpcError(Exception):

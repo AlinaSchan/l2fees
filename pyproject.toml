@@ -20,10 +20,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/alinaschanz/l2fees"
+Homepage = "https://github.com/AlinaSchan/l2fees"
 Author = "https://alinaschanz.life"
-Issues = "https://github.com/alinaschanz/l2fees/issues"
-Changelog = "https://github.com/alinaschanz/l2fees/blob/main/CHANGELOG.md"
+Issues = "https://github.com/AlinaSchan/l2fees/issues"
+Changelog = "https://github.com/AlinaSchan/l2fees/blob/main/CHANGELOG.md"
 
 [project.scripts]
 l2fees = "l2fees.cli:main"
